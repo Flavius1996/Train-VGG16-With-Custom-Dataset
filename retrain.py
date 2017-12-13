@@ -58,7 +58,7 @@ def train_model():
         
         # training the model
         model = pretrained_model(x_train.shape[1:], len(set(y_train)), 'relu')
-        hist = model.fit(x_train, y_train, epochs=2, validation_data=(x_test, y_test), verbose=1)
+        hist = model.fit(x_train, y_train, epochs=1000, verbose=1)
         
         #save indices
         with open("ROOT\\train_files.json", 'w') as outfile:
